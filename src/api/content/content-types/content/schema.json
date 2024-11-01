@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contents",
+  "info": {
+    "singularName": "content",
+    "pluralName": "contents",
+    "displayName": "Content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contentName": {
+      "type": "string",
+      "required": true
+    },
+    "contentDescription": {
+      "type": "text"
+    },
+    "profiles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::profile.profile",
+      "inversedBy": "contents"
+    }
+  }
+}
